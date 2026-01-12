@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 """TLDR Discord Bot - Summarizes channel messages using Gemini AI."""
 
 import logging
@@ -205,8 +207,8 @@ async def tldr_command(
             )
             return
 
-        # Reverse to get chronological order (oldest first)
-        messages.reverse()
+        # Sort in chronological order (oldest first)
+        messages.sort(key=lambda m: m.created_at)
 
         # Format messages for the LLM
         formatted_messages = "\n".join(
