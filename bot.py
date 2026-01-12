@@ -212,7 +212,7 @@ async def tldr_command(
 
         # Format messages for the LLM
         formatted_messages = "\n".join(
-            f"{msg.author.display_name}: {msg.content}" for msg in messages
+            f"{repr(msg.author.display_name)}: {repr(msg.content)}" for msg in messages
         )
 
         # Determine focus areas (custom or default)

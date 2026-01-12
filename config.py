@@ -42,7 +42,7 @@ If the conversation is very short or trivial, still provide a brief summary."""
 # Prompt for the LLM (use {focus} and {messages} placeholders)
 SUMMARY_PROMPT: str = """You are a helpful assistant that summarizes Discord chat conversations.
 {focus}
-Messages are formatted as "Username: Message content" and are in chronological order (oldest first).
+Messages are formatted as "'Username': 'Message content'" and are in chronological order (oldest first).
 
 ---
 MESSAGES:
